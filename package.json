@@ -25,7 +25,9 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "ngx-monaco-editor-v2": "^17.0.1",
     "rxjs": "~7.8.0",
+    "split-grid": "^1.0.11",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },

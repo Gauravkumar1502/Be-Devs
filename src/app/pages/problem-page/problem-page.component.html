@@ -1,2 +1,35 @@
-<p>problem-page works!</p>
-<p>{{ problemId }}</p>
+<div class="grid">
+    <header>
+        <nav>
+            <app-logo></app-logo>
+            <div class="nav__menu">
+                <div class="run_submit">
+                    <div id="run">
+                        <fa-icon [icon]="runIcon"></fa-icon>
+                        <p>Run</p>
+                    </div>
+                    <div id="submit">
+                        <fa-icon [icon]="submitIcon"></fa-icon>
+                        <p>Submit</p>
+                    </div>
+                </div>
+                <app-timer></app-timer>
+            </div>
+            <div class="nav__user">
+
+            </div>
+        </nav>
+    </header>
+    <div class="body">
+        <div class="container">
+            <p>Problem No : {{ problemId }}</p>
+            <h1>Sum of two numbers</h1>
+        </div>
+        <div class="gutter-col gutter-col-1">
+            <fa-icon [icon]="splitIcon"></fa-icon>
+        </div>
+        <div class="container">
+            <app-monaco-editor></app-monaco-editor>
+        </div>
+    </div>
+</div>

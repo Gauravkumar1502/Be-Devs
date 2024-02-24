@@ -40,10 +40,10 @@ main{
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: start;
-    height: 2lh;
     padding: 0 1.5rem 0 0;
 }
 .overflow-hidden{
+    height: 2lh;
     overflow: hidden;
 }
 section > p{
@@ -60,4 +60,24 @@ section > p{
     position: absolute;
     right: 0;
     background: var(--ring-color-dark);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    font-weight: 500;
+    border-bottom: 1px solid var(--ring-color);
+}
+th, td{
+    padding: .5rem 0;
+}
+tr:nth-child(odd):not(:first-child){
+    background: var(--ring-color);
+}
+.pointer{
+    cursor: pointer;
+}
+.pointer:hover{
+    color: var(--primary);
 }

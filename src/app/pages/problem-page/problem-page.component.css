@@ -1,0 +1,80 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    border-radius: 10rem;
+    background: var(--ring-color);
+}
+ul{
+    display: flex;
+    gap: 2rem;
+}
+li{
+    list-style: none;
+}
+li > a:hover{
+    color: var(--primary);
+    font-size: .95rem;
+    transition: 0.4s;
+}
+.grid {
+    height: 100%;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+.body{
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: 1fr 6px 1fr;
+    gap: .1rem;
+    height: 100%;
+}
+.container {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.gutter-col:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
+.gutter-col-1 {
+    grid-column: 2;
+}
+.gutter-col {
+    display: grid;
+    place-items: center;
+    color: var(--secondary);
+    cursor: col-resize;
+    font-size: 1.15rem;
+}
+.run_submit{
+    width: min-content;
+    display: flex;
+    gap: .1rem;
+    border: 1px solid var(--ring-color);
+    border-radius: 7px;
+}
+.run_submit > div:hover{
+    background-color: var(--primary);
+    color: var(--light);
+    scale: .9;
+}
+.run_submit > div{
+    display: flex;
+    gap: .1rem;
+    padding: .5rem 1rem;
+    background-color: var(--secondary);
+    cursor: pointer;
+}
+.run_submit > div:first-child{
+    border-radius: 7px 0 0 7px;
+}
+.run_submit > div:last-child{
+    border-radius: 0 7px 7px 0;
+}
+.nav__menu{
+    display: flex;
+    gap: 1rem;
+}

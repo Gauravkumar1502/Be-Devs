@@ -92,19 +92,23 @@
         <tr>
           <th mat-sort-header="status">Status</th>
             <th mat-sort-header="id">ID</th>
-            <th mat-sort-header="questionTitle">Question Title</th>
+            <th mat-sort-header="questionTitle">Title</th>
             <th mat-sort-header="difficulty">Difficulty</th>
         </tr>
         @for(question of sortedQuestions; track question.id){
-            <tr>
+            <tr routerLink="/problem/{{ question.id }}">
                 <td>
                     @if(question.status !== 'Unsolved'){
-                        <fa-icon [icon]="getStatusIcon(question.status)"></fa-icon>
+                        <fa-icon [icon]="getStatusIcon(question.status)"
+                            [ngStyle]="{'color': question.status==='Solved'? 'var(--success)': 'var(--warning)'}">
+                        </fa-icon>
                     }
                 </td>
                 <td>{{ question.id }}</td>
-                <td>{{ question.questionTitle }}</td>
-                <td>{{ question.difficulty }}</td>
+                <td class="pointer">{{ question.questionTitle }}</td>
+                <td [ngStyle]="{'color': getColor(question.difficulty)}">
+                    {{ question.difficulty }}
+                </td>
             </tr>
         }@empty {
             <tr>

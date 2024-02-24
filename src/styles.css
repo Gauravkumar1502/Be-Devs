@@ -7,7 +7,7 @@
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #f8f9fa;
-  --dark: rgb(26 26 26);
+  --dark: rgb(30, 30, 30);
   --light-color: rgba(0, 0, 0, 0.7);
   --ring-color: hsla(0,0%,0%,.1);
   --ring-color-0: hsla(0,0%,0%,.0);
@@ -53,3 +53,6 @@ a{
     }
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

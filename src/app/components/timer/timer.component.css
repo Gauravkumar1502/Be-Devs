@@ -20,4 +20,7 @@ fa-icon{
 }
 div > *:not(:first-child):hover{
     color: var(--primary);
+    background-color: var(--primary);
+    color: var(--light);
+    scale: .9;
 }

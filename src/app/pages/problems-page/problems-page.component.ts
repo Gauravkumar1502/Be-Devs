@@ -6,6 +6,7 @@ import {TooltipPosition, MatTooltipModule} from '@angular/material/tooltip';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAnglesDown, faAnglesUp, faBullseye, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { Router, RouterModule } from '@angular/router';
 
 export interface Question {
   status: string;
@@ -17,7 +18,7 @@ export interface Question {
 @Component({
   selector: 'app-problems-page',
   standalone: true,
-  imports: [FontAwesomeModule, CommonModule, MatSortModule, 
+  imports: [FontAwesomeModule, CommonModule, MatSortModule, RouterModule,
     MatFormFieldModule, MatTooltipModule, FormsModule, ReactiveFormsModule],
   templateUrl: './problems-page.component.html',
   styleUrl: './problems-page.component.css'
@@ -91,6 +92,18 @@ export class ProblemsPageComponent {
   }
   getStatusIcon(status: string) {
     return status === 'Solved' ? faCheckCircle : faBullseye;
+  }
+  getColor(difficulty: string) {
+    switch (difficulty) {
+      case 'Easy':
+        return 'var(--success)';
+      case 'Medium':
+        return 'var(--warning)';
+      case 'Hard':
+        return 'var(--danger)';
+      default:
+        return 'var(--info)';
+    }
   }
 }
 
