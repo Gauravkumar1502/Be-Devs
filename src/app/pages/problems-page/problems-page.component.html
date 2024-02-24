@@ -1,0 +1,115 @@
+<main>
+    <section class="cards">
+        <div class="card">
+            <h2>Compete Online</h2>
+            <img src="assets/images/OIG1.jpg" alt="image">
+        </div>
+        <div class="card">
+            <h2>Compete with Friends</h2>
+            <img src="assets/images/OIP.jpg" alt="image">
+        </div>
+    </section>
+
+    <section class="tags" [ngClass]="{'overflow-hidden': isCollapsed}">
+        <div class="expand-collapse"
+            (click)="isCollapsed = !isCollapsed">
+            {{ isCollapsed? 'Expand' : 'Collapse' }} 
+            <fa-icon [icon]="isCollapsed? faAngleDown : faAngleUp"></fa-icon> 
+        </div>
+        <p>Array</p>
+        <p>String</p>
+        <p>Hash Table</p>
+        <p>Dynamic Programming</p>
+        <p>Math</p>
+        <p>Sorting</p>
+        <p>Greedy</p>
+        <p>Database</p>
+        <p>Depth-First Search</p>
+        <p>Binary Search</p>
+        <p>Breadth-First Search</p>
+        <p>Tree</p>
+        <p>Matrix</p>
+        <p>Two Pointers</p>
+        <p>Bit Manipulation</p>
+        <p>Binary Tree</p>
+        <p>Heap (Priority Queue)</p>
+        <p>Stack</p>
+        <p>Prefix Sum</p>
+        <p>Simulation</p>
+        <p>Graph</p>
+        <p>Design</p>
+        <p>Counting</p>
+        <p>Sliding Window</p>
+        <p>Backtracking</p>
+        <p>Union Find</p>
+        <p>Enumeration</p>
+        <p>Linked List</p>
+        <p>Ordered Set</p>
+        <p>Monotonic Stack</p>
+        <p>Number Theory</p>
+        <p>Trie</p>
+        <p>Divide and Conquer</p>
+        <p>Recursion</p>
+        <p>Bitmask</p>
+        <p>Queue</p>
+        <p>Binary Search Tree</p>
+        <p>Segment Tree</p>
+        <p>Memoization</p>
+        <p>Geometry</p>
+        <p>Binary Indexed Tree</p>
+        <p>Hash Function</p>
+        <p>Topological Sort</p>
+        <p>Combinatorics</p>
+        <p>String Matching</p>
+        <p>Shortest Path</p>
+        <p>Rolling Hash</p>
+        <p>Game Theory</p>
+        <p>Data Stream</p>
+        <p>Interactive</p>
+        <p>Brainteaser</p>
+        <p>Monotonic Queue</p>
+        <p>Randomized</p>
+        <p>Merge Sort</p>
+        <p>Iterator</p>
+        <p>Concurrency</p>
+        <p>Doubly-Linked List</p>
+        <p>Probability and Statistics</p>
+        <p>Quickselect</p>
+        <p>Bucket Sort</p>
+        <p>Suffix Array</p>
+        <p>Minimum Spanning Tree</p>
+        <p>Counting Sort</p>
+        <p>Shell</p>
+        <p>Line Sweep</p>
+        <p>Reservoir Sampling</p>
+        <p>Strongly Connected Component</p>
+        <p>Eulerian Circuit</p>
+        <p>Radix Sort</p>
+        <p>Rejection Sampling</p>
+        <p>Biconnected Component</p>
+    </section>
+    <table matSort (matSortChange)="sortData($event)">
+        <tr>
+          <th mat-sort-header="status">Status</th>
+            <th mat-sort-header="id">ID</th>
+            <th mat-sort-header="questionTitle">Question Title</th>
+            <th mat-sort-header="difficulty">Difficulty</th>
+        </tr>
+        @for(question of sortedQuestions; track question.id){
+            <tr>
+                <td>
+                    @if(question.status !== 'Unsolved'){
+                        <fa-icon [icon]="getStatusIcon(question.status)"></fa-icon>
+                    }
+                </td>
+                <td>{{ question.id }}</td>
+                <td>{{ question.questionTitle }}</td>
+                <td>{{ question.difficulty }}</td>
+            </tr>
+        }@empty {
+            <tr>
+                <td colspan="5">No data found</td>
+            </tr>
+        }
+    </table>      
+</main>

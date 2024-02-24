@@ -1,0 +1,18 @@
+<div class="stopwatch-container">
+    <!-- <p>{{ timerInSecs }}</p> -->
+    <div>
+        <p>{{ formatTimeInHours() }}</p>
+    </div>  
+    <div>
+        <fa-icon [icon]="playPauseIcon" 
+            size="lg"
+            (click)="toggState()">
+        </fa-icon>
+    </div>
+    <div>
+        <fa-icon [icon]="resetIcon" 
+            size="lg"
+            (click)="resetTimer()">
+        </fa-icon>
+    </div>
+</div>

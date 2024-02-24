@@ -1,0 +1,63 @@
+main{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100vh;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.card{
+    cursor: pointer;
+    border-radius: 8px;
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+}
+.card > h2{
+    text-shadow: 2px 2px 3px var(--background);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    padding: 1rem;
+    z-index: 1;
+}
+.card > img{
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.7);
+}
+.tags{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: start;
+    height: 2lh;
+    padding: 0 1.5rem 0 0;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+section > p{
+    cursor: pointer;
+    padding: .3rem .6rem;
+    border-radius: 30px;
+    background: var(--ring-color);
+    white-space: nowrap;
+}
+.expand-collapse{
+    padding: .3rem .6rem;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    background: var(--ring-color-dark);
+}

@@ -1,0 +1,30 @@
+main{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+    background: var(--ring-color);
+}
+ul{
+    display: flex;
+    gap: 2rem;
+}
+li{
+    list-style: none;
+}
+li > a:hover{
+    color: var(--primary);
+    font-size: .95rem;
+    transition: 0.4s;
+}
+section{
+    padding: 2rem 0;
+    display: grid;
+    gap: 2rem;
+}

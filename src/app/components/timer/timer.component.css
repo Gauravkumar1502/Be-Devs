@@ -1,0 +1,23 @@
+.stopwatch-container{
+    width: min-content;
+    display: flex;
+    gap: .1rem;
+    border: 1px solid var(--ring-color);
+    border-radius: 7px;
+}
+.stopwatch-container > div{
+    padding: .5rem 1rem;
+    background-color: var(--secondary);
+}
+.stopwatch-container > div:first-child{
+    border-radius: 7px 0 0 7px;
+}
+.stopwatch-container > div:last-child{
+    border-radius: 0 7px 7px 0;
+}
+fa-icon{
+    cursor: pointer;
+}
+div > *:not(:first-child):hover{
+    color: var(--primary);
+}

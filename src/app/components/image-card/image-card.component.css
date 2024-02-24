@@ -1,0 +1,25 @@
+.container {
+    display: grid;
+    grid-template-areas: "a b";
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    gap: 1rem;
+}
+.reverse {
+    grid-template-areas: "b a";
+    grid-template-columns: 1fr 2fr;
+}
+.container > div {
+    grid-area: a;
+}
+.container > img {
+    grid-area: b;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+h2{
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+}
+p{
+    color: var(--light-color);
+}
